@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 
 import rospy
 import urdf_parser_py
@@ -16,7 +17,15 @@ from matplotlib import cm
 # --- FUNCTIONS
 # -------------------------------------------------------------------------------
 
-def urdf_to_marker_array(xml_robot, frame_id_prefix='', namespace=None, rgba=None):
+
+def xmlDescriptionFromXacroFile(filename):
+    tmp_file = '/tmp/my_xacro.xacro'  # just a temporary file
+    cmd = 'xacro ' + filename + ' -o ' + tmp_file
+    os.system(cmd)
+    return URDF.from_xml_file(tmp_file)
+
+
+def urdfToMarkerArray(xml_robot, frame_id_prefix='', namespace=None, rgba=None):
     """
     :param _robot_description:
     :param frame_id_prefix:
