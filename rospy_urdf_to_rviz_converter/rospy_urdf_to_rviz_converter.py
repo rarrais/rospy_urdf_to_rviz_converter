@@ -96,7 +96,7 @@ def urdfToMarkerArray(xml_robot, frame_id_prefix='', namespace=None, rgba=None):
                            scale=Vector3(x=1.0, y=1.0, z=1.0),
                            color=ColorRGBA(r=r, g=g, b=b, a=a))
                 m.mesh_resource = geom.filename
-                m.mesh_use_embedded_materials = False
+                m.mesh_use_embedded_materials = True
                 markers.markers.append(m)
                 counter += 1
             elif isinstance(geom, urdf_parser_py.urdf.Box):
