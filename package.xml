@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rospy_urdf_to_rviz_converter</name>
+  <version>0.0.0</version>
+  <description>Converts a ros robot description file to a rviz visualization_msgs/marker</description>
+
+  <author email="mike@todo.todo">Miguel Oliveira</author>
+
+  <maintainer email="mike@todo.todo">Miguel Oliveira</maintainer>
+
+  <license>GPLv3</license>
+
+  <url type="repository">https://github.com/miguelriemoliveira/rospy_urdf_to_rviz_converter</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <export>
+  </export>
+</package>
